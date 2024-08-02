@@ -1,0 +1,115 @@
+@font-face {
+    font-family: regularFont;
+    src: url(/assets/fonts/plain-regular-webfont.ttf);
+}
+@font-face {
+    font-family: lightFont;
+    src: url(/assets/fonts/plain-light-webfont.ttf);
+}
+@font-face {
+    font-family: regularItalicFont;
+    src: url(/assets/fonts/silkserif-regularitalic-webfont.ttf);
+}
+@font-face {
+    font-family: lightItalicFont;
+    src: url(/assets/fonts/silkserif-lightitalic-webfont.ttf);
+}
+
+*{
+    Margin:0;
+    Padding:0;
+    Box-sizing: border-box;
+    color: #fff;
+}
+html,body{
+    Width:100%;
+    Height:100%;
+}
+
+#loader{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color:#000000;
+    z-index: 999;
+    padding:25vh 10vw ;
+}
+.line{
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3vw;
+}
+.line-countbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4vw;
+}
+.line-countbox h5, .line-countbox h6{
+    font-size: 4vw;
+    font-weight: 100;
+    font-family: "lightItalicFont";
+}
+.line-countbox h5{
+    width: 5vw;
+    text-align: right;
+}
+.line h1{
+    font-size: 6.5vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: regularFont;
+}
+.line h2{
+    font-size: 5vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: regularFont;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes changeText {
+    0%{
+        font-family: lightFont;
+        -webkit-text-stroke:1px #fff ;
+        color: #fff;
+        font-weight: 500;
+        opacity: 1;
+    }
+    48%{
+        font-family: lightFont;
+        -webkit-text-stroke:1px #fff ;
+        color: #fff;
+        font-weight: 500;
+        opacity: 0;
+    }
+    50%{
+        font-family: lightItalicFont;
+        -webkit-text-stroke:1px #fff ;
+        color: transparent;
+        font-weight: 400;
+        opacity: 1;
+    }
+    100%{
+        font-family: lightItalicFont;
+        -webkit-text-stroke:1px #fff ;
+        color: transparent;
+        font-weight: 400;
+        opacity: 0;
+    }
+}
+
+/*  */
+#main{
+    position: relative;
+    background-color: #030303;
+}
+.page1{
+    width: 100%;
+    height: 100vh;
+    background-color: #151515;
+}
